@@ -2,49 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Converter</title>
-    <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Number System Converter</title>
+
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="inputs">
-            <!-- From Dropdown -->
-            <div class="w-100">
-                <select name="" id="from" class="input-field">
-                    <option value="2">Binary</option>
-                    <option value="">Octal</option>
-                    <option value="10">Decimal</option>
-                    <option value="16">Hexadecimal</option>
-                </select>
-            </div>
-            <!-- To Dropdown -->
-            <div class="w-100">
-                <select name="" id="to" class="input-field">
-                    <option value="2">Binary</option>
-                    <option value="">Octal</option>
-                    <option value="10">Decimal</option>
-                    <option value="16">Hexadecimal</option>
-                </select>
-            </div>
-        </div>
-        <!-- Input Field -->
-        <div class="w-100">
-            <input id="input-number" type="text" placeholder="Enter your number" class="input-field">
-        </div>
-        <!-- Buttons -->
-        <div style="margin-top: 40px;">
-            <button id="convert">Convert</button>
-            <button id="swap">Swap</button>
-        </div>
-        <!-- Result Box -->
-        <div id="result-box"></div>
-    </div>
+   <main>
+      <h1>Converter</h1>
 
-    <script src="script.js"></script>
+      <div id="select-container">
+         <select id="from-select">
+            <option value="Binary">Binary</option>
+            <option value="Decimal">Decimal</option>
+            <option value="Hexadecimal">Hexadecimal</option>
+            <option value="Octal">Octal</option>
+         </select>
+         <span>to</span>
+         <select id="to-select">
+            <option value="Binary">Binary</option>
+            <option value="Decimal" >Decimal</option>
+            <option value="Hexadecimal">Hexadecimal</option>
+            <option value="Octal">Octal</option>
+         </select>
+      </div>
+
+      <div id="input-container">
+         <input type="text" id="from-input" placeholder="Binary Number">
+         <span id="error"></span>
+      </div>
+      <div id="btn">
+      <button id="convert-button">Convert</button>
+      <button id="swap-button">Swap</button>
+      <button id="reset-button">Reset</button>
+   </div>
+
+      <input type="text" id="to-input" placeholder="Binary Number" readonly>
+   </main>
+
+
 </body>
 
 </html>
